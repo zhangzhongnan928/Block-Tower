@@ -40,7 +40,7 @@
 
 ## Introduction
 
-**Block Tower: Simplified Blockchain Tower Building** is an innovative blockchain-based game that combines strategic tower building with real-world cryptocurrency market dynamics. Players engage in constructing towers by purchasing blocks using **ETH on Base**, associate their blocks with various whitelisted ERC20 tokens, participate in battles against other towers, and strategize to maximize their rewards through market movements and game mechanics.
+**Block Tower: Simplified Blockchain Tower Building** is an innovative blockchain-based game that combines strategic tower building with real-world cryptocurrency market dynamics. Players engage in constructing towers by purchasing blocks using **ETH on Base**, associate their blocks with various whitelisted ERC20 tokens, and participate in battles against other towers. They strategize to maximize their rewards through market movements and game mechanics.
 
 ---
 
@@ -67,14 +67,19 @@
 
 - **Token Association:**
   - After purchasing a block with ETH, players can **associate** their block with an ERC20 token from a **whitelisted list**.
+- **Association Details:**
+  - **Recorded Information:**
+    - **ERC20 Token Contract Address**
+    - **Amount of Tokens:** Calculated based on the price per ETH at the time the block is added.
+  - This means that the ETH used to purchase the block is notionally converted into the associated ERC20 token amount, based on the current exchange rate at the time of purchase.
 - **Purpose of Association:**
-  - The associated token influences the block's strength based on its market performance.
+  - The associated token's performance influences the block's strength over time.
 - **Flexibility:**
   - Players can choose different tokens for each block or associate multiple blocks with the same token.
 
 ### 3. Block Strength
 
-- **Initial State:** All blocks start as **Neutral**.
+- **Initial State:** All blocks start with a strength level based on the initial token amount.
 - **Strength Categories:**
   - **Very Strong**
   - **Strong**
@@ -82,8 +87,12 @@
   - **Weak**
   - **Very Weak**
 - **Determining Strength:**
-  - The strength of each block changes based on the price fluctuations of its associated ERC20 token.
-  - Positive price movement increases block strength; negative movement decreases it.
+  - The strength of each block changes based on the **price fluctuations** of its associated ERC20 token since the block was added.
+  - **Calculation:**
+    - **Block Strength Value** = Current Value of Associated Tokens (Amount × Current Token Price)
+    - The initial amount and token price are recorded at the time of block addition.
+    - As the token price changes, the block's strength adjusts accordingly.
+- **Impact on Gameplay:**
   - Strength affects the tower's overall value and performance in battles.
 
 ### 4. Entering and Exiting
@@ -110,7 +119,7 @@
 - **Victory Conditions:**
   - The tower with the **highest average value per block** at the end of the battle wins.
     - **Average Value Calculation:** Total tower value divided by the number of blocks.
-    - **Block Value:** Determined by the strength (influenced by the associated token's performance) and the ETH value based on the bonding curve.
+    - **Block Value:** Determined by the current value of the associated tokens.
 - **Player Activity During Battle:**
   - Players can still enter or exit the tower during battles.
   - Exiting players' blocks are removed from the tower, affecting the average value.
@@ -118,19 +127,6 @@
 ### 6. Battle Consequences
 
 - **Token Swap Mechanism:**
-  - Upon losing a battle, **20%** of the ETH value from each block of the losing tower is automatically used to purchase the corresponding **associated tokens** of the winning tower's blocks via **Uniswap on Base** on a **1:1 basis**.
-    - *Example:* If Block 1 of the losing tower contains $100 worth of ETH, then $20 is used to buy Token B (the associated token of Block 1 in the winning tower).
-  - This process is repeated for each block in the losing tower.
-- **Holding of Swapped Tokens:**
-  - The acquired tokens are **held within the winning tower**.
-  - These tokens are **not** allocated to block holders proportionally.
-- **Claiming Winnings:**
-  - The accumulated swapped tokens can only be claimed by the **last block holder** when they remove the final block of the tower.
-  - This incentivizes players to acquire the last block and decide the optimal time to dismantle the tower.
-
-### 7. Strategic Elements
-
-- **Market Engagement:**
-  - Players are encouraged to monitor and potentially influence the market prices of their associated tokens.
-- **Token Association Strategy:**
-  - Choosing which token to associate with a block is a strategic​⬤
+  - Upon losing a battle, **20%** of the **ETH value** from each block of the losing tower is automatically used to purchase the corresponding **associated tokens** of the winning tower's blocks via **Uniswap on Base** on a **1:1 basis**.
+    - *Example:* If Block 1 of the losing tower has $100 worth of ETH, then $20 is used to buy Token B (the associated token of Block 1 in the winning tower).
+  - This​⬤
