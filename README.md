@@ -1,4 +1,4 @@
-# TowerCraft: Dynamic Blockchain Tower Building
+# Block Tower: Dynamic Blockchain Tower Building
 
 **Table of Contents**
 
@@ -20,16 +20,18 @@
    - [6. Continuous Gameplay](#6-continuous-gameplay)
 5. [Strategic Implications](#strategic-implications)
 6. [Additional Considerations](#additional-considerations)
-   - [1. Battle Cooldown](#1-battle-cooldown)
-   - [2. Balanced Matchmaking](#2-balanced-matchmaking)
-   - [3. Anti-Manipulation Measures](#3-anti-manipulation-measures)
-   - [4. Tower Alliances](#4-tower-alliances)
-   - [5. Leaderboards](#5-leaderboards)
-   - [6. Token Diversity Bonus](#6-token-diversity-bonus)
-   - [7. Liquidity and Slippage](#7-liquidity-and-slippage)
-   - [8. Transparency and Fair Play](#8-transparency-and-fair-play)
-   - [9. Regulatory Compliance](#9-regulatory-compliance)
-   - [10. Player Education](#10-player-education)
+   - [1. Whitelisted Tokens](#1-whitelisted-tokens)
+   - [2. Block Tower Token and Governance](#2-block-tower-token-and-governance)
+   - [3. Battle Cooldown](#3-battle-cooldown)
+   - [4. Balanced Matchmaking](#4-balanced-matchmaking)
+   - [5. Anti-Manipulation Measures](#5-anti-manipulation-measures)
+   - [6. Tower Alliances](#6-tower-alliances)
+   - [7. Leaderboards](#7-leaderboards)
+   - [8. Token Diversity Bonus](#8-token-diversity-bonus)
+   - [9. Liquidity and Slippage](#9-liquidity-and-slippage)
+   - [10. Transparency and Fair Play](#10-transparency-and-fair-play)
+   - [11. Regulatory Compliance](#11-regulatory-compliance)
+   - [12. Player Education](#12-player-education)
 7. [Conclusion](#conclusion)
 8. [Disclaimer](#disclaimer)
 
@@ -37,14 +39,14 @@
 
 ## Introduction
 
-**TowerCraft: Dynamic Blockchain Tower Building** is an innovative blockchain-based game that combines strategic tower building with real-world cryptocurrency market dynamics. Players engage in constructing towers by purchasing blocks with various ERC20 tokens, participate in battles against other towers, and strategize to maximize their rewards through market movements and game mechanics.
+**Block Tower: Dynamic Blockchain Tower Building** is an innovative blockchain-based game that combines strategic tower building with real-world cryptocurrency market dynamics. Players engage in constructing towers by purchasing blocks with various whitelisted ERC20 tokens, participate in battles against other towers, and strategize to maximize their rewards through market movements and game mechanics.
 
 ---
 
 ## Game Overview
 
 - **Genre:** Strategy, Blockchain, Multiplayer
-- **Platform:** Ethereum Blockchain (utilizing ERC20 tokens and smart contracts)
+- **Platform:** **Base Blockchain** (utilizing ERC20 tokens and smart contracts)
 - **Objective:** Build the tallest and strongest tower, engage in battles, and strategically manage your tower to maximize rewards.
 
 ---
@@ -55,10 +57,11 @@
 
 - **Open Participation:** Any player can start a new tower or contribute to existing towers by purchasing blocks.
 - **Block Purchase:**
-  - Blocks are purchased using ERC20 tokens of the player's choice.
+  - Blocks are purchased using ERC20 tokens from a **whitelisted list**.
+  - Initially, the whitelist is managed by the developer; over time, governance will be passed to the players.
   - The price of blocks increases according to a bonding curve mechanism, making each subsequent block more expensive.
 - **Token Selection:**
-  - Players can choose different ERC20 tokens for each block, considering potential price movements and market trends.
+  - Players can choose different ERC20 tokens for each block from the whitelisted tokens, considering potential price movements and market trends.
 
 ### 2. Block Strength
 
@@ -102,7 +105,7 @@
 ### 5. Battle Consequences
 
 - **Token Swap Mechanism:**
-  - Upon losing a battle, **20%** of the value from each block of the losing tower is automatically used to purchase the corresponding tokens of the winning tower's blocks via **Uniswap** on a **1:1 basis**.
+  - Upon losing a battle, **20%** of the value from each block of the losing tower is automatically used to purchase the corresponding tokens of the winning tower's blocks via **Uniswap on Base** on a **1:1 basis**.
     - *Example:* If Block 1 of the losing tower contains $100 worth of Token A, then $20 is used to buy Token B (the token of Block 1 in the winning tower).
   - This process is repeated for each block in the losing tower.
 - **Holding of Swapped Tokens:**
@@ -120,6 +123,8 @@
   - Owning multiple blocks, especially the last block, offers strategic advantages.
 - **Risk Management:**
   - Players must balance the risks of tower battles and market volatility with the potential rewards.
+- **Governance Participation:**
+  - Players can participate in the governance of the game by voting on the whitelist of allowed tokens using the **Block Tower Token**.
 - **Timing and Exit Strategy:**
   - Deciding when to remove the last block is crucial, as it determines when accumulated winnings are claimed.
 
@@ -130,10 +135,10 @@
 ### 1. Tower Building Phase
 
 - **Block Purchase:**
-  - Players buy blocks using ERC20 tokens.
+  - Players buy blocks using whitelisted ERC20 tokens.
   - Early blocks are cheaper due to the bonding curve pricing.
 - **Token Selection:**
-  - Strategic selection of tokens based on market analysis.
+  - Strategic selection of tokens from the whitelist based on market analysis.
 - **Tower Growth:**
   - Towers grow as more blocks are added, increasing eligibility for battles.
 
@@ -159,7 +164,7 @@
 ### 4. Post-Battle Phase
 
 - **Token Swap Execution:**
-  - 20% of the value from each block of the losing tower is swapped for the winning tower's tokens via Uniswap.
+  - 20% of the value from each block of the losing tower is swapped for the winning tower's tokens via Uniswap on Base.
 - **Accumulation of Winnings:**
   - Swapped tokens are held within the winning tower, accumulating over time as the tower wins more battles.
 - **No Immediate Claiming:**
@@ -191,6 +196,8 @@
   - Players may attempt to acquire multiple blocks to gain greater control over the tower's fate.
 - **Market Strategies:**
   - Monitoring and influencing token prices can significantly impact tower strength and battle outcomes.
+- **Governance Participation:**
+  - Holding **Block Tower Tokens** allows players to vote on the whitelist of allowed tokens, influencing game dynamics.
 - **Risk vs. Reward:**
   - Holding the last block comes with risks, such as potential tower loss in battles, but offers substantial rewards.
 - **Collaboration and Competition:**
@@ -202,70 +209,88 @@
 
 ## Additional Considerations
 
-### 1. Battle Cooldown
+### 1. Whitelisted Tokens
+
+- **Initial Whitelist:**
+  - The initial list of allowed tokens comes from the top tokens on **Base Uniswap**.
+- **Governance Transition:**
+  - Initially managed by the developer, the whitelist management will be passed to the players over time.
+- **User Voting:**
+  - Players vote on adding or removing tokens from the whitelist using the **Block Tower Token**, an ERC20 token on Base distributed as reward points to all users.
+
+### 2. Block Tower Token and Governance
+
+- **Block Tower Token (BTT):**
+  - An ERC20 token on the Base blockchain.
+  - Distributed as reward points to players based on their participation and achievements in the game.
+- **Governance Mechanism:**
+  - BTT holders can vote on proposals, such as which tokens to include in the whitelist.
+  - This democratic process empowers the community to shape the game's future.
+
+### 3. Battle Cooldown
 
 - **Purpose:**
   - Prevents towers from being constantly attacked.
 - **Mechanism:**
   - After a battle, towers have a cooldown period during which they cannot engage in new battles.
 
-### 2. Balanced Matchmaking
+### 4. Balanced Matchmaking
 
 - **Fairness:**
   - Ensures towers are matched with opponents of similar strength and value.
 - **Criteria:**
   - Matching based on tower level, total value, and block strengths.
 
-### 3. Anti-Manipulation Measures
+### 5. Anti-Manipulation Measures
 
 - **Market Integrity:**
   - Implements safeguards to detect and prevent artificial token price manipulation during battles.
 - **Monitoring:**
   - Automated systems to flag suspicious activities.
 
-### 4. Tower Alliances
+### 6. Tower Alliances
 
 - **Collaboration:**
   - Allows players to form alliances, pooling resources to build stronger towers.
 - **Shared Goals:**
   - Alliance members work together to enhance tower strength and strategize for battles.
 
-### 5. Leaderboards
+### 7. Leaderboards
 
 - **Recognition:**
   - Showcases towers with the most victories, highest values, and tallest heights.
 - **Competition:**
   - Encourages friendly competition among players.
 
-### 6. Token Diversity Bonus
+### 8. Token Diversity Bonus
 
 - **Incentive:**
-  - Encourages use of a variety of ERC20 tokens.
+  - Encourages use of a variety of ERC20 tokens from the whitelist.
 - **Mechanism:**
   - Towers with diverse tokens may receive bonuses, such as increased block strength or reduced battle cooldowns.
 
-### 7. Liquidity and Slippage
+### 9. Liquidity and Slippage
 
 - **Market Considerations:**
-  - Ensures sufficient liquidity on Uniswap for token swaps to minimize slippage.
+  - Ensures sufficient liquidity on Uniswap on Base for token swaps to minimize slippage.
 - **Limitations:**
   - Parameters set to handle low-liquidity situations, preventing excessive market impact.
 
-### 8. Transparency and Fair Play
+### 10. Transparency and Fair Play
 
 - **Smart Contracts:**
   - All game mechanics are encoded in transparent, open-source smart contracts.
 - **Player Trust:**
   - Transparency ensures players understand the rules and that the game operates fairly.
 
-### 9. Regulatory Compliance
+### 11. Regulatory Compliance
 
 - **Legal Considerations:**
   - Compliance with financial regulations related to token swaps and prize distributions.
 - **Responsible Gaming:**
   - Measures in place to prevent illicit activities and protect players.
 
-### 10. Player Education
+### 12. Player Education
 
 - **Guidance:**
   - Provides clear instructions and information about game mechanics, risks, and rewards.
@@ -276,7 +301,7 @@
 
 ## Conclusion
 
-**"TowerCraft: Dynamic Blockchain Tower Building"** offers an engaging blend of strategic gameplay and real-world market dynamics. By incorporating ERC20 tokens and blockchain technology, players experience a unique gaming environment where their decisions have tangible financial implications. The game's mechanics encourage strategic thinking, collaboration, and active market participation, making it a compelling experience for both gamers and cryptocurrency enthusiasts.
+**"Block Tower: Dynamic Blockchain Tower Building"** offers an engaging blend of strategic gameplay and real-world market dynamics. By incorporating ERC20 tokens and blockchain technology on the Base blockchain, players experience a unique gaming environment where their decisions have tangible financial implications. The game's mechanics encourage strategic thinking, collaboration, and active market participation, making it a compelling experience for both gamers and cryptocurrency enthusiasts.
 
 ---
 
