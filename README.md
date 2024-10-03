@@ -97,10 +97,14 @@
   - Eligible towers can challenge other eligible towers.
   - Battles are mutual agreements or can be randomly matched.
 - **Battle Duration:**
-  - Each battle lasts for **10 minutes**.
+  - Each battle lasts for **12 hours**.
 - **Victory Conditions:**
-  - The tower with the **highest total value** at the end of the battle wins.
-  - Total value is calculated based on the current strength and market value of all blocks.
+  - The tower with the **highest average value per block** at the end of the battle wins.
+    - **Average Value Calculation:** Total tower value divided by the number of blocks.
+  - This method ensures fairness regardless of tower size.
+- **Player Activity During Battle:**
+  - Players can still enter or exit the tower during battles.
+  - Exiting players' blocks are removed from the tower, affecting the average value.
 
 ### 5. Battle Consequences
 
@@ -155,11 +159,13 @@
 - **Initiation:**
   - Towers initiate battles with other eligible towers.
 - **Duration:**
-  - Battles last for 10 minutes, during which tower values can fluctuate.
+  - Battles last for **12 hours**, allowing ample time for strategic decisions.
 - **Market Influence:**
-  - Players might engage in market activities to boost their token prices, thereby increasing their tower's value.
+  - Players might engage in market activities to boost their token prices, thereby increasing their tower's average value.
+- **Player Actions:**
+  - Players can enter or exit towers during battles, impacting the average value.
 - **Outcome:**
-  - The tower with the highest total value at the end of the battle wins.
+  - The tower with the highest **average value per block** at the end of the battle wins.
 
 ### 4. Post-Battle Phase
 
@@ -182,7 +188,7 @@
 ### 6. Continuous Gameplay
 
 - **Entering and Exiting:**
-  - Players can join or leave towers at any time by purchasing or removing blocks.
+  - Players can join or leave towers at any time by purchasing or removing blocks, even during battles.
 - **Dynamic Environment:**
   - Continuous market fluctuations and player actions create a dynamic and strategic gaming experience.
 - **Ongoing Battles:**
@@ -204,6 +210,9 @@
   - Players might form alliances to strengthen their towers or compete to control the last block.
 - **Exit Timing:**
   - Deciding when to remove the last block requires careful consideration of accumulated winnings and potential future gains.
+- **Battle Strategies:**
+  - Since the average value per block determines victory, players may focus on enhancing individual block values.
+  - Exiting low-value blocks during battles can increase the tower's average value.
 
 ---
 
@@ -237,9 +246,9 @@
 ### 4. Balanced Matchmaking
 
 - **Fairness:**
-  - Ensures towers are matched with opponents of similar strength and value.
+  - Ensures towers are matched with opponents of similar average block values.
 - **Criteria:**
-  - Matching based on tower level, total value, and block strengths.
+  - Matching based on tower level, average value per block, and block strengths.
 
 ### 5. Anti-Manipulation Measures
 
@@ -258,7 +267,7 @@
 ### 7. Leaderboards
 
 - **Recognition:**
-  - Showcases towers with the most victories, highest values, and tallest heights.
+  - Showcases towers with the most victories, highest average values, and tallest heights.
 - **Competition:**
   - Encourages friendly competition among players.
 
