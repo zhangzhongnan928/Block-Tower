@@ -36,6 +36,8 @@
 7. [Conclusion](#conclusion)
 8. [Disclaimer](#disclaimer)
 
+
+
 ---
 
 ## Introduction
@@ -341,3 +343,40 @@
 *This game involves the use of real ETH and ERC20 tokens, engaging with cryptocurrency markets. Players should be aware of the inherent risks associated with token investments, including market volatility and potential financial loss. The game is designed for entertainment purposes and should not be considered as financial advice or a guaranteed investment opportunity. Players are encouraged to conduct their own research and exercise caution when participating. The developers are not responsible for any losses incurred during gameplay.*
 
 ---
+
+
+# Block Tower: Fee Structure
+
+A 1% fee is applied to all transactions where users extract value from the system. This includes:
+
+1. Exiting Blocks:
+   - When a player removes a block from a tower, 1% of the ETH they receive is deducted as a fee.
+
+2. Tower Death:
+   - When the last block of a tower is removed, 1% of the total value (including accumulated winnings) is taken as a fee.
+
+3. Block NFT/token royalty/trading fee: 1%
+
+## Implementation Details
+
+- Fee Calculation: The 1% fee is calculated based on the current market value of the assets being extracted.
+- Fee Collection: Fees are automatically collected by the smart contract at the time of the transaction.
+- Transparency: All fees are clearly displayed to users before they confirm transactions.
+
+## Fee Utilization
+
+The collected fees could be used for:
+1. Game maintenance and development
+2. Liquidity provision for the game's token markets
+3. Rewards for active players or governance participants
+4. Partial burning to create deflationary pressure on the game's native token (if applicable)
+
+## Strategic Implications
+
+This fee structure:
+1. Encourages longer-term holding strategies
+2. Adds a small friction to rapid entry/exit tactics
+3. Provides a consistent revenue stream for game sustainability
+4. Aligns with typical DeFi protocols, making it familiar to crypto users
+
+Players will need to factor in this 1% fee when planning their entry and exit strategies, potentially leading to more thoughtful and strategic gameplay.
